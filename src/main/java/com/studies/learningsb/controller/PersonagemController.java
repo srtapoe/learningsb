@@ -1,9 +1,7 @@
 package com.studies.learningsb.controller;
 
 import com.studies.learningsb.model.Personagem;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,4 +35,13 @@ public class PersonagemController {
         return new Personagem(1L, "Ted Mosby", "How I met your mother");
     }
 
+    @GetMapping("/{id}")
+    public Personagem obterPersonagemPorId(@PathVariable Long id){
+        return new Personagem(id, "Morty", "Rick and Morty");
+    }
+
+    @GetMapping
+    public Personagem obterPersonagemPorIdBody(@RequestParam(name = "id") Long id){
+        return new Personagem(id, "Candace", "Pheas and Pherb");
+    }
 }
