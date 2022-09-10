@@ -1,6 +1,6 @@
 package com.studies.learningsb.controller;
 
-import com.studies.learningsb.model.Personagem;
+import com.studies.learningsb.entity.Personagem;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;

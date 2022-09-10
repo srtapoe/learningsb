@@ -1,4 +1,4 @@
-package com.studies.learningsb.model;
+package com.studies.learningsb.entity;
 
 public class Personagem {
 
